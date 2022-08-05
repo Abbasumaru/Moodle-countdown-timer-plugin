@@ -1,0 +1,72 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+    @package   Get time
+    @copyleft 2022 Debonair Training {@link http://debonairtraining.com}
+    @copyright 2010 Dongsheng Cai <dongsheng@moodle.com>
+    @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+
+{{!
+    @template mod_exam/timer
+
+    Countdown timer for take-home release exams.
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
+
+    Context variables required for this template:
+    * none
+
+    Example context (json):
+    {
+    }
+}}
+
+{{!
+	timer.mustache is used for rendering customjs2.js to the countdown timer for those students WITH sufficient capability
+    @template timer/section
+}}
+
+<div id="msg" style="display:none;"><h4>Please do not refresh your browser. <br>You will be able to access your exam automatically at the end of the countdown.</h4></div>
+
+<section id="examtimer" style="display:none">
+
+<div id="clockdiv" style="font-family: sans-serif; color: #fff; display: inline-block; font-weight: 100; font-size: 20px;">
+    <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
+        <span class="days" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Days</div>
+    </div>
+    <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
+        <span class="hours" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Hours</div>
+    </div>
+    <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
+        <span class="minutes" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Minutes</div>
+    </div>
+    <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
+        <span class="seconds" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Seconds</div>
+    </div>
+</div>
+</section>
+
+{{#js}}
+    require(['templates/customjs.js']);
+{{/js}}
