@@ -21,7 +21,7 @@ license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 Examtimer module
 =============
 
-Examtimer module child-plugin of the native Moodle "Examtimer" Resource module.
+Examtimer module child-plugin of the native Moodle "Folder" Resource module.
 
 This module is intended for distribution of large number of documents.
 
