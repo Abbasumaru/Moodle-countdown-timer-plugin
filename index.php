@@ -97,6 +97,22 @@ foreach ($examtimers as $examtimer) {
         format_module_intro('examtimer', $examtimer, $cm->id));
 }
 
+public function timer_setting() {
+             global $PAGE;
+
+             $days = 'Days';
+             $hours = 'Hours';
+             $minutes = 'Minutes';
+             $seconds = 'Seconds';
+             $templatecon = [
+               'days' => $days,
+               'hours' => $hours,
+               'minutes' => $minutes,
+               'seconds' => $seconds
+             ];
+             echo $OUTPUT->render_from_template('mod_examtimer/timer', $templatecon);
+}
+
 echo html_writer::table($table);
 
 echo $OUTPUT->footer();

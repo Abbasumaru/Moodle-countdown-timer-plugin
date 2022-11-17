@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -60,26 +59,6 @@ class mod_examtimer_renderer extends plugin_renderer_base {
      * @param int $id The ID of an attempt
      * @param int $nextpage The number of the next page
      */
-//    public function attempt_page($attemptobj) {
-//        $output = '';
-//        $output .= $this->header();
-//        $output .= $this->exam_notices($messages);
-//        $output .= $this->countdown_timer($attemptobj, time());
-//        $output .= $this->attempt_form($attemptobj, $page, $slots, $id, $nextpage);
-//        $output .= $this->footer();
-//        return $output;
-//    }
-
-    /**
-     * Output the JavaScript required to initialise the countdown timer.
-     * @param int $timerstartvalue time remaining, in seconds.
-     */
-    public function initialise_timer($timerstartvalue, $ispreview) {
-        $options = array($timerstartvalue, (bool)$ispreview);
-        $this->page->requires->js_init_call('M.mod_exam.timer.init', $options, false, exam_get_js_module());
-    }
-
-    /** ***********************END OF QUIZ CODE*************************/
 
 
     /**
@@ -121,7 +100,7 @@ class mod_examtimer_renderer extends plugin_renderer_base {
 
     $context = context_module::instance($cm->id);
     if (has_capability('mod/examtimer:managefiles', $context)) {
-		
+
 //Display files to only logged in user who has capability
         $output .= $this->output->render_from_template('mod_examtimer/timer', (object)[]);
 
@@ -192,6 +171,9 @@ class mod_examtimer_renderer extends plugin_renderer_base {
         $this->page->requires->js_init_call('M.mod_examtimer.init_tree', array($id, $showexpanded));
         return $content;
     }
+
+
+
 
  /**
      * Internal function - creates htmls structure suitable for YUI tree.

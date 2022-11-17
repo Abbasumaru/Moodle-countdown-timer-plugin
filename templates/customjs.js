@@ -2,8 +2,9 @@ $(document).ready(function(){
 //Comment or not line 3 to enable or disable right click for inspection
 disableSelection(document.body);
 
+
 });
-//Line 7 - 11 disables ctrl + shift + for inspection 
+//Line 7 - 11 disables ctrl + shift + for inspection
 document.addEventListener("keydown", function (event) {
     if (event.ctrlKey) {
         event.preventDefault();
@@ -56,6 +57,8 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock(id, endtime) {
+
+
 
       var clock = document.getElementById(id);
       var daysSpan = clock.querySelector('.days');

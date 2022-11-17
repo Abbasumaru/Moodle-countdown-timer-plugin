@@ -24,10 +24,9 @@
 
 $string['bynameondate'] = 'by {$a->name} - {$a->date}';
 $string['contentheader'] = 'Content';
-$string['contentheader'] = 'Content';
 
-$string['pluginname'] = 'Exam Timer';
-$string['examtimer_title'] = 'Examtimer title';
+$string['pluginname'] = 'Folder Exam Timer';
+$string['examtimer_title'] = 'Folder Examtimer title';
 $string['completiondownload'] = 'Student Must download the file';
 $string['dnduploadmakeexamtimer'] = 'Unzip files and create examtimer';
 $string['downloadexamtimer'] = 'Download Files';
@@ -39,6 +38,10 @@ $string['eventexamtimerupdated'] = 'Examtimer updated';
 $string['examtimer:addinstance'] = 'Add a new examtimer';
 $string['examtimer:managefiles'] = 'Manage files in examtimer module';
 $string['examtimer:view'] = 'View examtimer content';
+$string['days'] = 'Days';
+$string['hours'] = 'Hours';
+$string['minutes'] = 'Minutes';
+$string['seconds'] = 'Seconds';
 $string['examtimercontent'] = 'Files and subexamtimers';
 $string['forcedownload'] = 'Force download of files';
 $string['completiondownloaddesc'] = 'Done Download';
@@ -53,7 +56,7 @@ $string['indicator:socialbreadth_help'] = 'This indicator is based on the social
 $string['indicator:socialbreadthdef'] = 'Examtimer social';
 $string['indicator:socialbreadthdef_help'] = 'The participant has reached this percentage of the social engagement offered by the Examtimer resources during this analysis interval (Levels = No participation, Participant alone)';
 $string['indicator:socialbreadthdef_link'] = 'Learning_analytics_indicators#Social_breadth';
-$string['modulename'] = 'Examtimer';
+$string['modulename'] = 'Folder_examtimer';
 $string['modulename_help'] = 'The examtimer module enables a teacher to display a number of related files inside a single examtimer, reducing scrolling on the course page. A zipped examtimer may be uploaded and unzipped for display, or an empty examtimer created and files uploaded into it.
 
 A examtimer may be used
@@ -67,13 +70,12 @@ $string['page-mod-examtimer-x'] = 'Any examtimer module page';
 $string['page-mod-examtimer-view'] = 'Examtimer module main page';
 $string['privacy:metadata'] = 'The Examtimer resource plugin does not store any personal data.';
 $string['pluginadministration'] = 'Examtimer administration';
-$string['pluginname'] = 'Examtimer';
 $string['display'] = 'Display examtimer contents';
 $string['display_help'] = 'If you choose to display the examtimer contents on a course page, there will be no link to a separate page. The description will be displayed only if \'Display description on course page\' is ticked. Note that participants view actions cannot be logged in this case.';
 $string['displaypage'] = 'On a separate page';
 $string['displayinline'] = 'Inline on a course page';
 $string['noautocompletioninline'] = 'Automatic completion on viewing of activity can not be selected together with "Display inline" option';
-$string['search:activity'] = 'Examtimer';
+$string['search:activity'] = 'Folder_Examtimer';
 $string['showdownloadexamtimer'] = 'Show download examtimer button';
 $string['showdownloadexamtimer_help'] = 'If set to \'yes\', a button will be displayed allowing the contents of the examtimer to be downloaded as a zip file.';
 $string['showexpanded'] = 'Show subexamtimers expanded';

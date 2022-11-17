@@ -39,8 +39,8 @@ class backup_examtimer_activity_structure_step extends backup_activity_structure
         // Define each element separated
 		// Added columns duedate and completion download for examtimer backup
         $examtimer = new backup_nested_element('examtimer', array('id'), array(
-            'name', 'intro', 'introformat', 'revision',
-            'timemodified', 'duedate', 'completiondownload','display', 'showexpanded', 'forcedownload'));
+            'course','name', 'intro', 'introformat', 'revision',
+            'timemodified', 'duedate', 'completiondownload','display', 'showexpanded', 'showdownloadexamtimer', 'forcedownload'));
 
         // Build the tree
         // (nice mono-tree, lol)

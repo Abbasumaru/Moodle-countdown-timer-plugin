@@ -47,7 +47,7 @@ class mod_examtimer_mod_form extends moodleform_mod {
         $mform->addRule('name', null, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
         $this->standard_intro_elements();
-		
+
 // Due date added for the countdown timer
         $name = get_string('duedate', 'mod_examtimer');
         $mform->addElement('date_time_selector', 'duedate', $name, array('optional'=>true));
@@ -126,7 +126,7 @@ class mod_examtimer_mod_form extends moodleform_mod {
 
     /**
  * Add elements for setting the custom completion rules.
- *  
+ *
  * @category completion
  * @return array List of added element names, or names of wrapping group elements.
  * Completionsubmission logic refactored for completiondownload
@@ -135,9 +135,8 @@ class mod_examtimer_mod_form extends moodleform_mod {
 public function add_completion_rules() {
     $mform =& $this->_form;
 
-    $mform->addElement('advcheckbox', 'completiondownload', '', get_string('completiondownload', 'examtimer'));
+    $mform->addElement('advcheckbox', 'completiondownload', '', get_string('completiondownload', 'mod_examtimer'));
     $mform->setType('completiondownload', PARAM_INT);
-    // Enable this completion rule by default.
     $mform->setDefault('completiondownload', 1);
     return array('completiondownload');
 }

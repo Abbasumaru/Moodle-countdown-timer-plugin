@@ -1,6 +1,4 @@
 <?php
-error_reporting(0);
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -81,12 +79,17 @@ $PAGE->set_activity_record($examtimer);
 
 $output = $PAGE->get_renderer('mod_examtimer');
 
+
 echo $output->header();
 
 echo $output->heading(format_string($examtimer->name), 2);
 
 // The set time for javascript count down timer
 echo $output->heading('<p id="due" style="display:none">'.date('r',$examtimer->duedate).'</p>');
+echo $output->heading('<p id="day" style="display:none">'.get_string('days', 'examtimer').'</p>');
+echo $output->heading('<p id="hours" style="display:none">'.get_string('hours', 'examtimer').'</p>');
+echo $output->heading('<p id="minutes" style="display:none">'.get_string('minutes', 'examtimer').'</p>');
+echo $output->heading('<p id="seconds" style="display:none">'.get_string('seconds', 'examtimer').'</p>');
 
 echo $output->display_examtimer($examtimer);
 

@@ -43,6 +43,28 @@
     @template timer/section
 }}
 
+{{!
+    @template plugintype_pluginname/template_name
+
+    Template purpose and description.
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
+
+    Context variables required for this template:
+    * none
+
+    Example context (json):
+    {
+    }
+    {
+        "name": "Bobby",
+        "grade": 10
+    }
+}}
 <div id="msg" style="display:none;"><h4>Please do not refresh your browser. <br>You will be able to access your exam automatically at the end of the countdown.</h4></div>
 
 <section id="examtimer" style="display:none">
@@ -50,23 +72,34 @@
 <div id="clockdiv" style="font-family: sans-serif; color: #fff; display: inline-block; font-weight: 100; font-size: 20px;">
     <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
         <span class="days" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
-        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Days</div>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;"><span id="days"></span></div>
     </div>
     <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
         <span class="hours" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
-        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Hours</div>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;"><span id="hou"></span></div>
     </div>
     <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
         <span class="minutes" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
-        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Minutes</div>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;"><span id="minu"></span></div>
     </div>
     <div style="padding: 8px; border-radius: 3px; background: #d27b7e; display: inline-block;">
         <span class="seconds" style="padding: 10px; border-radius: 3px; background: #A92C31; display: inline-block;"></span>
-        <div class="smalltext" style="padding-top: 4px; font-size: 14px;">Seconds</div>
+        <div class="smalltext" style="padding-top: 4px; font-size: 14px;"><span id="sec"></span></div>
     </div>
 </div>
 </section>
 
 {{#js}}
     require(['templates/customjs.js']);
+
+    //get the variable from the language file
+    var day = document.getElementById("day").textContent;
+    var hour = document.getElementById("hours").textContent;
+    var minute = document.getElementById("minutes").textContent;
+    var second = document.getElementById("seconds").textContent;
+
+    document.getElementById("days").innerHTML = day;
+    document.getElementById("hou").innerHTML = hour;
+    document.getElementById("minu").innerHTML = minute;
+    document.getElementById("sec").innerHTML = second;
 {{/js}}
